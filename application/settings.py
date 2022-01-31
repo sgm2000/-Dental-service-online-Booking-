@@ -144,7 +144,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'dentalbooking2021@gmail.com'
-EMAIL_HOST_PASSWORD = 'dentalinter2021'
+EMAIL_HOST_PASSWORD = ''
 
 if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARD_PROTO','https')
