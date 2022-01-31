@@ -1,0 +1,26 @@
+{% extends "userbase.html" %}
+{% block title %}
+
+{% endblock %}
+{% block body %}
+<h3>List of appointmnets</h3>
+{% if appointment_list %}
+<table class="content-table">
+    <thead>
+      <tr>
+        <th>Patient Name</th>
+        <th>Service Selected</th>
+        <th>Date</th>
+        <th>Session</th></tr></thead>
+        <tbody>
+        {% for appointment in appointment_list %}
+        <tr>
+            <td>{{appointment.name}}</td><td>{{appointment.service}}</td><td>{{appointment.date}}</td><td>{{appointment.timings}}</td>
+        </tr>
+    {% endfor %}
+</tbody>
+  </table>
+  {% else %}
+  <p> There are no appointmnets available</p>
+  {% endif %}
+{% endblock %}

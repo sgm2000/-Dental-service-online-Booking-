@@ -1,0 +1,27 @@
+{% extends "userbase.html" %}
+{% block title %}
+Services
+{% endblock %}
+{% block body %}
+<h2>List of Services</h2>
+{% if service_list%}
+<table class="content-table">
+    <thead>
+      <tr>
+        <th>Sl. no</th>
+        <th>Title</th>
+        <th>Price(in Rs.)</th>
+      </tr>
+    </thead>
+    {% for service in service_list %}
+    <tbody>
+      <tr>
+        <td>{{service.id}}</td><td>{{service.title}}</td><td>{{service.price}}</td>
+      </tr>
+    </tbody>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p> There are no services available</p>
+  {% endif %}
+{% endblock %}

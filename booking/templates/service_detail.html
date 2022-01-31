@@ -1,0 +1,14 @@
+{% extends "userbase.html" %}
+{% block title %}
+
+{% endblock %}
+{% block body %}
+<div class="card" style="width: 50rem;">
+    <img src='/media/{{service.image}}' class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{service.title}}</h5>
+      <h6>{{service.desc}}</h6>
+    </div>
+  </div>
+
+{% endblock %}

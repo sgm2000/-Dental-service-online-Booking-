@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        .col-md-3
+        {
+        display: inline-block;
+        margin-left:-4px;
+        }
+        .carousel-indicators .active {
+        background-color: blue;
+          }
+        .col-md-3 img{
+          width: 233px;
+          height: 184px;
+        }
+        body .carousel-indicator li{
+        background-color: blue;
+        }
+        body .carousel-indicators{
+        bottom: 0;
+        }
+        body .carousel-control-prev-icon,
+        body .carousel-control-next-icon{
+        background-color: black;
+        }
+       
+        body .carousel-indicators {
+        bottom: -34px;
+        }
+         body .no-padding{
+         padding-left: 0,
+         
+         }
+
+        .content-table {
+          border-collapse: collapse;
+          margin: 25px 0;
+          font-size: 0.9em;
+          min-width: 400px;
+          border-radius: 5px 5px 0 0;
+          overflow: hidden;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .content-table thead tr {
+          background-color: #009879;
+          color: #ffffff;
+          text-align: left;
+          font-weight: bold;
+        }
+
+        .content-table th,
+        .content-table td {
+          padding: 12px 15px;
+        }
+
+        .content-table tbody tr {
+          border-bottom: 1px solid #dddddd;
+        }
+
+        .content-table tbody tr:nth-of-type(even) {
+          background-color: #f3f3f3;
+        }
+
+        .content-table tbody tr:last-of-type {
+          border-bottom: 2px solid #009879;
+        }
+
+        .content-table tbody tr.active-row {
+          font-weight: bold;
+          color: #009879;
+        }
+        p{
+          line-height: 1em;
+          height: 2em;       /* height is 2x line-height, so two lines will display */
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: block;
+
+        }
+
+         
+    </style>
+</head>
+
+<body>
+   
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><b>DentalOnlineServiceBooking</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/user">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pricing">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/book">Booking</a>
+              </li>
+              <li class="nav-item ml">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    {% block body %}
+    {% endblock %}
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <footer>
+      <p></p>
+      </footer>
+
+  </body>
+</html>
